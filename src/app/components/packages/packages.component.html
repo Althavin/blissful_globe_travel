@@ -1,0 +1,12 @@
+<section class="packages-section" @fadeIn>
+  <h2>Our Packages</h2>
+  <div class="packages-list">
+    <div class="package-card" *ngFor="let package of packages">
+      <img [src]="package.image" alt="{{ package.name }}" class="package-image">
+      <h3>{{ package.name }}</h3>
+      <p>{{ package.description }}</p>
+      <p class="details">{{ package.details }}</p>
+      <a [routerLink]="package.link" class="cta-button">Learn More</a>
+    </div>
+  </div>
+</section>

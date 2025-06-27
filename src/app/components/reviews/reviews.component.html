@@ -1,0 +1,51 @@
+<section class="reviews-section" (window:resize)="onResize()">
+  <div class="section-header">
+    <h2>{{ sectionTitle }}</h2>
+    <p class="section-subtitle">{{ sectionDescription }}</p>
+  </div>
+
+  <div class="overall-rating">
+    <div class="stars">
+      <span
+        *ngFor="let star of [1, 2, 3, 4, 5]"
+        [class.filled]="star <= overallRating"
+        >★</span
+      >
+    </div>
+    <span class="rating-text"
+      >Rated {{ overallRating }}/5 from {{ reviewCount }} reviews</span
+    >
+  </div>
+
+  <div class="reviews-container" [@slideAnimation]="currentIndex">
+    <div class="review-card" *ngFor="let review of visibleReviews">
+      <div class="reviewer-info">
+        <img [src]="review.image" [alt]="review.name" class="reviewer-image" />
+        <div class="reviewer-details">
+          <h3>{{ review.name }}</h3>
+          <p class="reviewer-location">{{ review.location }}</p>
+        </div>
+      </div>
+      <div class="review-content">
+        <div class="review-rating">
+          <span
+            *ngFor="let star of [1, 2, 3, 4, 5]"
+            [class.filled]="star <= review.rating"
+            >★</span
+          >
+        </div>
+        <p class="review-text">"{{ review.comment }}"</p>
+        <p class="review-date">{{ review.date }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-dots">
+    <button
+      *ngFor="let dot of [].constructor(totalSlides); let i = index"
+      [class.active]="currentIndex === i"
+      (click)="goTo(i)"
+      [attr.aria-label]="'Go to slide ' + (i + 1)"
+    ></button>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<div class="destinations-container">
+  <div class="destinations-header" @fadeIn>
+    <h1>Destinations in {{ selectedCountry || 'Unknown' }}</h1>
+    <p class="subtitle">Explore the Best Travel Spots</p>
+  </div>
+  <div class="destinations-content" @fadeIn>
+    <div class="destination-list">
+      <div class="package-item" *ngFor="let package of getPackages(); let i = index">
+        <div class="package-content" [ngClass]="{'reverse': !isImageLeft(i)}">
+          <div class="package-text" [@slideInRight]="isAnimated ? 'animated' : 'void'">
+            <h3>{{ package.name }}</h3>
+            <p>{{ package.description }}</p>
+            <a (click)="toggleExpand(package); $event.preventDefault()" [routerLink]="['/packages', getPackageUrl(package.name)]" class="cta-button">Learn More</a>
+          </div>
+          <div class="package-image" [@slideInRight]="isAnimated ? 'animated' : 'void'">
+            <img [src]="package.image" alt="{{ package.name }}" loading="lazy" *ngIf="package.image">
+          </div>
+        </div>
+        <div class="destination-detail" *ngIf="package.expanded" @expand>
+          <h4>Itinerary</h4>
+          <p>{{ package.itinerary }}</p>
+          <h4>Inclusions</h4>
+          <p>{{ package.inclusions }}</p>
+          <h4>Price</h4>
+          <p>{{ package.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

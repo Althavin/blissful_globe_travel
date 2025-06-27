@@ -1,0 +1,26 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <a routerLink="/">Globe Travel</a>
+    </div>
+
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/destinations" routerLinkActive="active">Destinations</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+
+    <div class="mobile-menu-btn">
+      <mat-icon (click)="toggleMenu()">menu</mat-icon>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.active]="menuActive">
+    <a routerLink="/" (click)="toggleMenu()">Home</a>
+    <a routerLink="/destinations" (click)="toggleMenu()">Destinations</a>
+    <a routerLink="/about" (click)="toggleMenu()">About</a>
+    <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
+  </div>
+</header>

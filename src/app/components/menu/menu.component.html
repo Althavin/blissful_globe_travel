@@ -1,0 +1,139 @@
+<div class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+      <img
+        src="/assets/images/logo.png"
+        alt="Blissful Globe Travel Logo"
+        class="logo-image"
+      />
+    </a>
+  </div>
+
+  <nav class="nav-wrapper" [ngClass]="{ open: menuOpen }">
+    <ul>
+      <li class="nav-item">
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          (click)="closeMobileMenu()"
+        >
+          <span class="nav-text">Home</span>
+        </a>
+      </li>
+
+      <li
+        class="nav-item dropdown"
+        [ngClass]="{ open: isDestinationsDropdownOpen }"
+      >
+        <a (click)="toggleDestinationsDropdown($event)" class="dropdown-toggle">
+          <span class="nav-text">Destinations</span>
+          <span
+            class="arrow"
+            [ngClass]="{ rotated: isDestinationsDropdownOpen }"
+          >
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </a>
+
+        <ul
+          class="dropdown-menu"
+          [ngClass]="{ open: isDestinationsDropdownOpen }"
+        >
+          <li>
+            <a
+              routerLink="/destinations/kenya/packages"
+              (click)="selectDestination()"
+              routerLinkActive="active"
+            >
+              <span class="destination-flag">🇰🇪</span>
+              <span class="destination-name">Kenya</span>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/destinations/uganda/packages"
+              (click)="selectDestination()"
+              routerLinkActive="active"
+            >
+              <span class="destination-flag">🇺🇬</span>
+              <span class="destination-name">Uganda</span>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/destinations/tanzania/packages"
+              (click)="selectDestination()"
+              routerLinkActive="active"
+            >
+              <span class="destination-flag">🇹🇿</span>
+              <span class="destination-name">Tanzania</span>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/destinations/rwanda/packages"
+              (click)="selectDestination()"
+              routerLinkActive="active"
+            >
+              <span class="destination-flag">🇷🇼</span>
+              <span class="destination-name">Rwanda</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          (click)="closeMobileMenu()"
+        >
+          <span class="nav-text">About</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          (click)="closeMobileMenu()"
+        >
+          <span class="nav-text">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="button-wrapper">
+    <a href="/enquire" class="enquire-btn">
+      <span class="btn-text">Enquire Now</span>
+      <span class="btn-icon">→</span>
+    </a>
+  </div>
+
+  <button
+    class="nav-toggle"
+    (click)="toggleMenu()"
+    [ngClass]="{ active: menuOpen }"
+    aria-label="Toggle menu"
+  >
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</div>
+
+<!-- Backdrop for mobile menu -->
+<div
+  class="navbar-backdrop"
+  [ngClass]="{ active: menuOpen }"
+  (click)="closeMobileMenu()"
+></div>

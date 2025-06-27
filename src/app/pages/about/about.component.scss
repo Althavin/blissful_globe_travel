@@ -1,0 +1,211 @@
+.about-page {
+  .about-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/about-hero.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    
+    .container {
+      width: 100%;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
+  }
+  
+  .about-content {
+    padding: 4rem 0;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .about-text {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      text-align: center;
+      
+      h2 {
+        font-size: 2.5rem;
+        color: #2E7D32;
+        margin-bottom: 1.5rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #424242;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+      
+      .feature-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+          width: 80px;
+          height: 80px;
+          background-color: #E8F5E9;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+          
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        
+        h3 {
+          font-size: 1.5rem;
+          color: #2E7D32;
+          margin-bottom: 1rem;
+        }
+        
+        p {
+          color: #616161;
+          line-height: 1.6;
+        }
+      }
+    }
+    
+    .about-groups {
+      margin-bottom: 4rem;
+      
+      h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #2E7D32;
+        margin-bottom: 2rem;
+      }
+      
+      .group-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        
+        .group-card {
+          background: white;
+          border-radius: 8px;
+          padding: 1.5rem;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+          border-top: 4px solid #FF6D00;
+          
+          h3 {
+            font-size: 1.25rem;
+            color: #212121;
+            margin-bottom: 0.5rem;
+          }
+          
+          p {
+            color: #616161;
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+    
+    .about-cta {
+      background-color: #2E7D32;
+      padding: 3rem;
+      border-radius: 12px;
+      text-align: center;
+      color: white;
+      
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+        opacity: 0.9;
+      }
+      
+      .cta-button {
+        background-color: #FF6D00;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-block;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: #E65100;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    .about-hero {
+      height: 300px;
+      
+      h1 {
+        font-size: 2.25rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+      }
+    }
+    
+    .about-content {
+      padding: 2rem 0;
+      
+      .about-text {
+        margin-bottom: 2rem;
+        
+        h2 {
+          font-size: 2rem;
+        }
+      }
+      
+      .about-cta {
+        padding: 2rem 1rem;
+        
+        h2 {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}

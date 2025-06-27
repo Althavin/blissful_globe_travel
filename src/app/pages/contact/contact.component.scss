@@ -1,0 +1,138 @@
+.contact-container {
+  min-height: calc(100vh - 60px); /* Adjust for navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('/assets/images/tour1.jpg') no-repeat center/cover; /* Background image */
+  position: relative;
+}
+
+.contact-header {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+}
+
+.contact-content {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  margin-top: -50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 30px;
+}
+
+.contact-form {
+  flex: 1;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FFA500;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e67e22;
+    }
+  }
+}
+
+.contact-info {
+  flex: 1;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #800000;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #444;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-header {
+    padding: 40px 10px;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .contact-content {
+    margin-top: -30px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form,
+  .contact-info {
+    flex: none;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

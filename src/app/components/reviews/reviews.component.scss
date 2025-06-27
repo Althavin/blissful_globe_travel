@@ -1,0 +1,206 @@
+.reviews-section {
+  background-color: #FAFAFA;
+  padding: 3rem 1rem;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    
+    h2 {
+      font-size: 2rem;
+      color: #212121;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1rem;
+      color: #616161;
+      line-height: 1.5;
+    }
+  }
+
+  .overall-rating {
+    margin-bottom: 2rem;
+    
+    .stars {
+      margin-bottom: 0.5rem;
+      
+      span {
+        font-size: 1.5rem;
+        color: #E0E0E0;
+        margin: 0 2px;
+        
+        &.filled {
+          color: #FF6D00;
+        }
+      }
+    }
+    
+    .rating-text {
+      font-size: 1rem;
+      color: #424242;
+      font-weight: 500;
+    }
+  }
+
+  .reviews-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    max-width: 100%;
+    overflow: hidden;
+    
+    .review-card {
+      flex: 0 0 calc(33.333% - 1rem);
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      height: 280px; /* Fixed height for consistency */
+      display: flex;
+      flex-direction: column;
+      
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        
+        .reviewer-image {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 0.75rem;
+          border: 2px solid #E8F5E9;
+        }
+        
+        .reviewer-details {
+          text-align: left;
+          
+          h3 {
+            font-size: 1.1rem;
+            color: #212121;
+            margin-bottom: 0.25rem;
+          }
+          
+          .reviewer-location {
+            font-size: 0.8rem;
+            color: #757575;
+          }
+        }
+      }
+      
+      .review-content {
+        text-align: left;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+        .review-rating {
+          margin-bottom: 0.75rem;
+          
+          span {
+            font-size: 1rem;
+            color: #E0E0E0;
+            margin-right: 2px;
+            
+            &.filled {
+              color: #FF6D00;
+            }
+          }
+        }
+        
+        .review-text {
+          font-size: 0.9rem;
+          line-height: 1.6;
+          color: #424242;
+          margin-bottom: auto;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .review-date {
+          font-size: 0.8rem;
+          color: #9E9E9E;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #E0E0E0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+      
+      &.active {
+        background-color: #2E7D32;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .reviews-section {
+    padding: 2rem 1rem;
+    
+    .reviews-container {
+      .review-card {
+        flex: 0 0 calc(50% - 1rem);
+        height: 260px;
+        
+        .review-text {
+          -webkit-line-clamp: 3;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 1.5rem 1rem;
+    
+    .section-header {
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      .section-subtitle {
+        font-size: 0.95rem;
+      }
+    }
+    
+    .reviews-container {
+      .review-card {
+        flex: 0 0 90%;
+        height: auto;
+        padding: 1.25rem;
+        
+        .review-text {
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
+  }
+}
