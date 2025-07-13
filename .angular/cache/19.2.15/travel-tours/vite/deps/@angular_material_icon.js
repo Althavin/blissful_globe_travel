@@ -4,7 +4,7 @@ import {
 import {
   DomSanitizer,
   HttpClient
-} from "./chunk-P7QZZCQL.js";
+} from "./chunk-P5X4M6VH.js";
 import "./chunk-QO4OLBK2.js";
 import {
   DOCUMENT,

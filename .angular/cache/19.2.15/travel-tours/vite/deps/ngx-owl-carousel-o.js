@@ -10,8 +10,8 @@ import {
   ActivatedRoute,
   NavigationEnd,
   Router
-} from "./chunk-NTRP7PWY.js";
-import "./chunk-P7QZZCQL.js";
+} from "./chunk-UDLTDLZH.js";
+import "./chunk-P5X4M6VH.js";
 import "./chunk-QO4OLBK2.js";
 import {
   CommonModule,
