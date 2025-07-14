@@ -4,13 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && ng run travel-tours:server:production",
-    "postbuild": "mkdir -p dist/travel-tours/browser/browser/browser && mv dist/travel-tours/browser/* dist/travel-tours/browser/browser/browser/ || true",
+    "build": "ng build",
+    "build:ssr": "ng build && ng run travel-tours:server",
+    "serve:ssr": "node dist/travel-tours/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:travel-tours": "node dist/travel-tours/server/server.mjs",
-    "build:ssr": "ng build && ng run travel-tours:server:production",
-    "serve:ssr": "node dist/travel-tours/server/main.js"
+    "postbuild": "mkdir -p dist/travel-tours/browser/browser/browser && mv dist/travel-tours/browser/* dist/travel-tours/browser/browser/browser/ || true"
   },
   "private": true,
   "dependencies": {
