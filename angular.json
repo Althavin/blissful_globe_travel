@@ -164,5 +164,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "travel-tours"
 }
