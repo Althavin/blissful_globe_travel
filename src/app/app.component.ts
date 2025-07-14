@@ -10,7 +10,7 @@ import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-b
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, MenuComponent, WhatsappButtonComponent],
+  imports: [RouterOutlet, FooterComponent, MenuComponent, HeaderComponent, WhatsappButtonComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

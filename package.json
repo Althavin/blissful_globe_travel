@@ -8,8 +8,7 @@
     "build:ssr": "ng build && ng run travel-tours:server",
     "serve:ssr": "node dist/travel-tours/server/server.mjs",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "postbuild": "mkdir -p dist/travel-tours/browser/browser/browser && mv dist/travel-tours/browser/* dist/travel-tours/browser/browser/browser/ || true"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -49,3 +48,5 @@
     "typescript": "~5.7.2"
   }
 }
+
+
