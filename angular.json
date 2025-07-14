@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/travel-tours/browser/browser",
+            "outputPath": "dist/travel-tours/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,7 +29,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets"
+                "output": "/assets/"
               },
               {
                 "glob": "**/*",
@@ -153,7 +153,7 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "/assets"
+                "output": "/assets/"
               }
             ],
             "styles": [
@@ -164,6 +164,5 @@
         }
       }
     }
-  },
-  "defaultProject": "travel-tours"
+  }
 }
