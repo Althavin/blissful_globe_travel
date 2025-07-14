@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/travel-tours/browser"  # Now matches angular.json
+  publish = "dist/travel-tours/browser/browser"  # Exactly as the error suggests
   functions = "dist/travel-tours/server"
 
 [[plugins]]
