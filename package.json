@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ng run travel-tours:server:production",
+    "postbuild": "mkdir -p dist/travel-tours/browser/browser/browser && mv dist/travel-tours/browser/* dist/travel-tours/browser/browser/browser/ || true",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:travel-tours": "node dist/travel-tours/server/server.mjs",
